@@ -10,8 +10,9 @@ import java.util.LinkedList;
 import unojavaapplication.Model.*;
 
 /**
- *
+ * 
  * @author tan
+ * i think deck, playerhand and discard pile is a stack of cards, therefore created superclass pileOfCards
  */
 public class pileOfCards {
 

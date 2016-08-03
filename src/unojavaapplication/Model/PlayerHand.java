@@ -17,7 +17,7 @@ public class PlayerHand extends pileOfCards {
         this.cardList = new LinkedList();
     }
 
-    public int getCardValue() {
+    public int getHandValue() {
         int value=0;
         for (Card c : this.cardList) {
             value+=c.getScore();

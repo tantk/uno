@@ -27,7 +27,7 @@ public class Deck extends pileOfCards {
 
     public Deck() {
         this.cardList = new LinkedList();
-        //add one to drawtwo for each color 2 times
+        //add card type 1 until card type drawtwo for each color 2 times
         for (int k = 0; k < 2; k++) {
             for (int i = 0; i < 4; i++) {
                 for (int j = 1; j < 13; j++) {//planning to rename image file name to my format
@@ -39,12 +39,14 @@ public class Deck extends pileOfCards {
                 }
             }
         }
-        for (int i = 0; i < 4; i++) {//planning to rename image file name to my format
+        //add the zeros
+        for (int i = 0; i < 4; i++) {
             Card card = new Card(cardID, Card.cardType.values()[0], Card.cardColor.values()[i], Card.cardColor.values()[i].toString() + " " + Card.cardType.values()[0].toString() + ".png");
             this.cardList.add(card);
             numberOfCards++;
             cardID++;
         }
+        //add wild cards
         for (int j = 0; j < 2; j++) {
             for (int i = 0; i < 4; i++) {
                 //planning to rename image file name to my format

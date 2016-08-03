@@ -31,7 +31,9 @@ public class UnoJavaApplication {
         players.add(player3);
         players.add(player4);
         players.add(player5);
+        //create game
         UNOGame g = new UNOGame(players);
+        //setup game by distributing 7 cards for ea players
         g.setupGame();
         g.displayGameSituation();
         //testing play card

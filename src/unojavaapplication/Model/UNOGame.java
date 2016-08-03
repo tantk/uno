@@ -56,9 +56,6 @@ public class UNOGame {
     public GameStatus getGameStatus() {
         return gameStatus;
     }
-//change game status
-
-
 
     public Deck getGameDeck() {
         return gameDeck;
@@ -85,8 +82,8 @@ public class UNOGame {
 
     public void setupGame() {
         String startingPlayer = "";
-        //this.gameDeck.Shuffle();
-
+        this.gameDeck.Shuffle();
+//7 cards for ea players
         for (int i = 0; i < 7; i++) {
             for (Player c : this.playerList) {
                 c.drawCardFrom(this.gameDeck);
@@ -99,10 +96,21 @@ public class UNOGame {
         startingPlayer = this.playerList.get(unojavaapplication.utility.utility.randInt(0, this.playerList.size() - 1)).getName();
         System.out.println("The starting player is: " + startingPlayer);
     }
-
+    
+    public int countCardScoreOnBoard()
+    {
+        int cardScoreOnBoard=0;
+        for(Player p:this.getPlayerList())
+        {
+            cardScoreOnBoard+=p.getPlayerHand().getHandValue();
+        }
+        return cardScoreOnBoard;
+    }
+    
     public void displayGameSituation() {
         System.out.println("Cards in deck:" + this.getGameDeck().remainingCards());
         System.out.println("Discard: " + this.discardPile.showTopCard().toString());
+        System.out.println("Total card score on board: "+countCardScoreOnBoard());
         System.out.println();
         for (Player p : this.getPlayerList()) {
 
@@ -110,7 +118,7 @@ public class UNOGame {
             System.out.println();
         }
     }
-    
+    //change game status
     public void changeToStarted()
     {
     this.gameStatus=GameStatus.started;

@@ -71,7 +71,7 @@ public class Player {
 
     public void showPlayerHand() {
         System.out.println("Player ID:" + this.getId() + " Name=" + this.getName() + ":");
-        System.out.println("Total Card Score: "+this.playerHand.getCardValue());
+        System.out.println("Player Total Card Score: "+this.playerHand.getHandValue());
         System.out.println("Card in hand:");
         for (Card c : this.getPlayerHand().cardList) {
             System.out.println(c.toString());
