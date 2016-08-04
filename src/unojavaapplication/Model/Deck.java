@@ -31,7 +31,7 @@ public class Deck extends pileOfCards {
         for (int k = 0; k < 2; k++) {
             for (int i = 0; i < 4; i++) {
                 for (int j = 1; j < 13; j++) {//planning to rename image file name to my format
-                    Card card = new Card(cardID, Card.cardType.values()[j], Card.cardColor.values()[i], Card.cardColor.values()[i].toString() + " " + Card.cardType.values()[j].toString() + ".png");
+                    Card card = new Card(cardID, Card.cardType.values()[j], Card.cardColor.values()[i], Card.cardColor.values()[i].toString() + "_" + Card.cardType.values()[j].toString() + ".png");
                     this.cardList.add(card);
                     numberOfCards++;
                     cardID++;
@@ -41,7 +41,7 @@ public class Deck extends pileOfCards {
         }
         //add the zeros
         for (int i = 0; i < 4; i++) {
-            Card card = new Card(cardID, Card.cardType.values()[0], Card.cardColor.values()[i], Card.cardColor.values()[i].toString() + " " + Card.cardType.values()[0].toString() + ".png");
+            Card card = new Card(cardID, Card.cardType.values()[0], Card.cardColor.values()[i], Card.cardColor.values()[i].toString() + "_" + Card.cardType.values()[0].toString() + ".png");
             this.cardList.add(card);
             numberOfCards++;
             cardID++;
@@ -50,7 +50,7 @@ public class Deck extends pileOfCards {
         for (int j = 0; j < 2; j++) {
             for (int i = 0; i < 4; i++) {
                 //planning to rename image file name to my format
-                Card card = new Card(cardID, Card.cardType.values()[13 + j], Card.cardColor.values()[4], Card.cardColor.values()[4].toString() + " " + Card.cardType.values()[13 + j] + ".png");
+                Card card = new Card(cardID, Card.cardType.values()[13 + j], Card.cardColor.values()[4], Card.cardColor.values()[4].toString() + "_" + Card.cardType.values()[13 + j] + ".png");
                 this.cardList.add(card);
                 numberOfCards++;
                 cardID++;
